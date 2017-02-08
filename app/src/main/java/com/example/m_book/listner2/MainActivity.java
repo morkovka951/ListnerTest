@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Button button1;
     Button button2;
     Button button3;
+    Button button4;
     TextView textView;
     TextView textView2;
     TextView textView3;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
+        button4 = (Button) findViewById(R.id.button4);
         textView = (TextView) findViewById(R.id.textView);
         textView2 = (TextView) findViewById(R.id.textView2);
         textView3 = (TextView) findViewById(R.id.textView3);
@@ -51,7 +53,11 @@ public class MainActivity extends AppCompatActivity {
                         textView.setText("");
                         textView2.setText("");
                         textView3.setText(R.string.textView3);
-
+                        break;
+                    case R.id.button4:
+                        textView.setText(R.string.textView4);
+                        textView2.setText(R.string.textView4);
+                        textView3.setText(R.string.textView4);
                         break;
                 }
             }
@@ -59,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(onClickListener);
         button2.setOnClickListener(onClickListener);
         button3.setOnClickListener(onClickListener);
+        button4.setOnClickListener(onClickListener);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
